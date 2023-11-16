@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import WorkPage from './ui/Work'
+import ContactPage from './ui/Contact'
 
 export default function HomePage() {
   return (
@@ -19,7 +20,6 @@ export default function HomePage() {
           <nav className="w-full flex justify-around mt-8 text-xl">
             <Link href="/">About</Link>
             <Link href="/work">Work</Link>
-            <Link href="/projects">Projects</Link>
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="flex justify-center mt-80 flex-col">
@@ -33,6 +33,7 @@ export default function HomePage() {
         </div>
       </div>
       <WorkPage />
+      <ContactPage />
     </main>
   )
 }
