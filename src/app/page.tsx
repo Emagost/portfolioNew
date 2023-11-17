@@ -20,18 +20,27 @@ export default function HomePage() {
           </h2>
         </div>
         <div className="container w-2/5">
-          <nav className="w-full flex justify-around mt-8 text-xl">
+          <nav className="w-full sm:flex justify-around mt-8 text-xl hidden">
             <Link href="/">About</Link>
             <Link href="/work">Work</Link>
             <Link href="/contact">Contact</Link>
           </nav>
-          <div className="flex justify-center mt-80 flex-col">
-            <h1 className="text-8xl mb-4">
+          <div className="flex justify-center sm:mt-24 lg:mt-80 flex-col">
+            <h1 className="sm:text-4xl lg:text-8xl mb-4">
               Emanuel
               <br />
               Gomez
             </h1>
-            <h2 className="text-2xl ml-2">Software Engineer</h2>
+            <h2 className="sm:text-xl lg:text-2xl ml-2">Software Engineer</h2>
+            <p className="ml-2 mt-4 sm:text-sm lg:text-base font-normal text-gray-500 dark:text-gray-400">
+              I&apos;m a Degree in Systems student, passionate about software development. I like
+              challenges, I want to be an attitudinal person to keep improving myself and apply good
+              practices.
+              <br />
+              During my degree, I started to study in a course called Coderhood, this motivated me
+              to be an autodidact person, use logical thinking to problem resolution, and started to
+              study new technologies.
+            </p>
           </div>
         </div>
       </div>
