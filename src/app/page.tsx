@@ -33,13 +33,12 @@ export default function HomePage() {
             </h1>
             <h2 className="sm:text-xl lg:text-2xl ml-2">Software Engineer</h2>
             <p className="ml-2 mt-4 sm:text-sm lg:text-base font-normal text-gray-500 dark:text-gray-400">
-              I&apos;m a Degree in Systems student, passionate about software development. I like
-              challenges, I want to be an attitudinal person to keep improving myself and apply good
-              practices.
+              Enthusiastic software engineer pursuing a Systems Engineering degree. Proven expertise
+              in programming fundamentals and web development.
               <br />
-              During my degree, I started to study in a course called Coderhood, this motivated me
-              to be an autodidact person, use logical thinking to problem resolution, and started to
-              study new technologies.
+              Advanced from Software Developer to Tech Lead, showcasing adaptability and leadership.
+              <br />
+              Ongoing commitment to academic and professional growth.
             </p>
           </div>
         </div>

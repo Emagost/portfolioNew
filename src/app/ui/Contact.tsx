@@ -1,6 +1,48 @@
+'use client'
+import emailjs from '@emailjs/browser'
+import { FormEvent, useCallback, useRef, useState } from 'react'
+
 export default function ContactPage() {
+  const [isMessageSend, setIsMessageSend] = useState(false)
+  const form = useRef()
+
+  const sendEmail = useCallback((event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+        form.current as any,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY as string,
+      )
+      .then(
+        result => {
+          setIsMessageSend(true)
+        },
+        error => {
+          setIsMessageSend(false)
+        },
+      )
+  }, [])
+
   return (
     <section>
+      {isMessageSend && (
+        <div className="relative">
+          <div
+            className="absolute top-0 right-0 p-2 bg-green-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+            role="alert"
+          >
+            <span className="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">
+              New
+            </span>
+            <span className="font-semibold mr-2 text-left flex-auto">
+              Message sent successfully
+            </span>
+          </div>
+        </div>
+      )}
       <div className="flex items-center h-screen overflow-x-hidden bg-gradient-to-b from-black to-[#1A1840]">
         <h2 className="text-4xl transform -rotate-90 origin-left text-white px-4 py-2 ml-6">
           Contact
@@ -86,35 +128,41 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
-                <form className="p-6 flex flex-col justify-center">
+                <form
+                  ref={form as any}
+                  onSubmit={sendEmail}
+                  className="p-6 flex flex-col justify-center"
+                >
                   <div className="flex flex-col">
                     <label className="hidden">Full Name</label>
                     <input
-                      type="name"
-                      name="name"
+                      required
+                      type="text"
+                      name="user_name"
                       id="name"
                       placeholder="Full Name"
-                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 font-semibold focus:border-indigo-500 focus:outline-none"
                     />
                   </div>
                   <div className="flex flex-col mt-2">
                     <label className="hidden">Email</label>
                     <input
+                      required
                       type="email"
-                      name="email"
+                      name="user_email"
                       id="email"
                       placeholder="Email"
-                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 font-semibold focus:border-indigo-500 focus:outline-none"
                     />
                   </div>
                   <div className="flex flex-col mt-2">
-                    <label className="hidden">Number</label>
-                    <input
-                      type="tel"
-                      name="tel"
+                    <label className="hidden">How can I help you?</label>
+                    <textarea
+                      required
+                      name="message"
                       id="tel"
-                      placeholder="Telephone Number"
-                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                      placeholder="Message"
+                      className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 font-semibold focus:border-indigo-500 focus:outline-none"
                     />
                   </div>
                   <button
