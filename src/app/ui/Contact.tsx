@@ -27,7 +27,7 @@ export default function ContactPage() {
   }, [])
 
   return (
-    <section>
+    <section id="contact">
       {isMessageSend && (
         <div className="relative">
           <div
@@ -44,7 +44,7 @@ export default function ContactPage() {
         </div>
       )}
       <div className="flex items-center h-screen overflow-x-hidden bg-gradient-to-b from-black to-[#1A1840]">
-        <h2 className="text-4xl transform -rotate-90 origin-left text-white px-4 py-2 ml-6">
+        <h2 className="text-4xl transform -rotate-90 origin-left text-white px-4 py-2 ml-6 select-none">
           Contact
         </h2>
         <div className="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0">
