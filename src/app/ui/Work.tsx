@@ -5,7 +5,7 @@ import { scaleSkills } from '../lib/data'
 export default function WorkPage() {
   return (
     <section id="work">
-      <div className="flex items-center h-screen overflow-x-hidden bg-gradient-to-b from-[#1A1840] from-5% to-black to-15%">
+      <div className="flex items-center h-screen overflow-x-hidden bg-gradient-to-b from-[#1A1840] from-10% to-black to-20%">
         <h2 className="text-4xl transform -rotate-90 origin-left text-white px-4 py-2 ml-6 select-none">
           Work
         </h2>
