@@ -67,15 +67,11 @@ export default function WorkPage() {
                       Software engineer
                     </h3>
                     <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                      Played a crucial role in improving and building new backoffice tools and
-                      optimizing workflows.
+                      Lead the development and maintenance of back-office systems and various tools,
+                      managing a team of 5 developers and implementing agile methodologies.
                       <br />
-                      Worked independently on the project, demonstrating excellent planning, design,
-                      and development capacity.
-                      <br />
-                      Recently transitioned to a tech lead role working along with another engineer
-                      applying agile methodologies and SCRUM, creating sprints for five engineers,
-                      prioritizing tasks, and engaging with stakeholders to gather requirements.
+                      As the backoffice lead, I handle intricate coding tasks, take on additional
+                      responsibilities, and adapt to evolving work requirements.
                     </p>
                   </li>
                   <li className="mb-10 ml-4">
@@ -87,8 +83,10 @@ export default function WorkPage() {
                       Software developer
                     </h3>
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                      Development and implementation of custom extractors for different platforms.
-                      Migrating and refactoring code to a GCP environment.
+                      Strengthened programming fundamentals while focusing on developing and
+                      maintaining data extraction tools for various eCommerce platforms like Shopify
+                      and BigCommerce. Delved into React.js for building tools and back-office
+                      applications.
                     </p>
                   </li>
                   <li className="ml-4">
@@ -100,7 +98,8 @@ export default function WorkPage() {
                       Software developer
                     </h3>
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                      Make custom scripts and scrapers to extract data from different sites
+                      Initiated my programming journey, specializing in creating web scrapers for
+                      extracting data from eCommerce websites and making custom scripts
                     </p>
                   </li>
                 </ol>

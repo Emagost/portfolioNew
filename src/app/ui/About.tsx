@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="container w-2/4 relative">
         <Image
           alt="Personal image"
-          src="/myPicture.jpeg"
+          src="/myPicture.jpg"
           height={1224}
           width={1600}
           className="h-full w-4/5 object-cover"

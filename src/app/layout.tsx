@@ -7,6 +7,15 @@ const WorkSans = Work_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Emanuel Gomez - Portfolio',
   description: 'Emanuel Gomez - Portfolio',
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/svg',
+      sizes: '32x32',
+      href: '/icon.svg',
+      url: '/icon.svg',
+    },
+  ],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
