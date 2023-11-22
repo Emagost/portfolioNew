@@ -12,7 +12,7 @@ export default function AboutPage() {
           width={1224}
           className="h-full w-4/5 object-cover hidden lg:block"
           blurDataURL="/blurMyPicture.webp"
-          priority
+          placeholder="blur"
         />
         <h2 className="absolute text-4xl transform -rotate-90 origin-left text-white px-4 py-2 top-1/2 ml-6 select-none">
           About
