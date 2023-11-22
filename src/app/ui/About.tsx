@@ -10,7 +10,7 @@ export default function AboutPage() {
           src="/myPicture.jpeg"
           height={1600}
           width={1224}
-          className="h-full w-4/5 object-cover"
+          className="h-full w-4/5 object-cover hidden lg:block"
           priority
           rel="preload"
         />
