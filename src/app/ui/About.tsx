@@ -7,10 +7,11 @@ export default function AboutPage() {
       <div className="container w-2/4 relative">
         <Image
           alt="Personal image"
-          src="/myPicture.jpg"
+          src="/myPicture.jpeg"
           height={1224}
           width={1600}
           className="h-full w-4/5 object-cover"
+          priority
         />
         <h2 className="absolute text-4xl transform -rotate-90 origin-left text-white px-4 py-2 top-1/2 ml-6 select-none">
           About

@@ -52,9 +52,9 @@ export default function ContactPage() {
             <div className="mt-8 overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="p-6 mr-2 sm:rounded-lg">
-                  <h1 className="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
+                  <h2 className="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
                     Get in touch
-                  </h1>
+                  </h2>
                   <p className="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
                     Fill in the form to start a conversation
                   </p>

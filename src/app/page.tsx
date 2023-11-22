@@ -1,6 +1,7 @@
 import WorkPage from './ui/Work'
 import ContactPage from './ui/Contact'
 import AboutPage from './ui/About'
+import Footer from './ui/Footer'
 export default function HomePage() {
   return (
     <main
@@ -10,6 +11,7 @@ export default function HomePage() {
       <AboutPage />
       <WorkPage />
       <ContactPage />
+      <Footer />
     </main>
   )
 }

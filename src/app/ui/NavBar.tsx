@@ -1,15 +1,8 @@
 'use client'
-export default function NavBar() {
-  const handleWorkClick = (event: any, element: string) => {
-    event.preventDefault()
-    const workElement = document.getElementById(element)
-    if (workElement) {
-      workElement.scrollIntoView({
-        behavior: 'smooth',
-      })
-    }
-  }
 
+import { handleWorkClick } from '../utils/smoothScrool'
+
+export default function NavBar() {
   return (
     <nav className="w-full sm:flex justify-around mt-8 text-xl hidden">
       <a onClick={event => handleWorkClick(event, 'about')} className="hover:cursor-pointer">
