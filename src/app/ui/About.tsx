@@ -8,8 +8,8 @@ export default function AboutPage() {
         <Image
           alt="Personal image"
           src="/myPicture.jpeg"
-          height={1224}
-          width={1600}
+          height={1600}
+          width={1224}
           className="h-full w-4/5 object-cover"
           priority
         />
