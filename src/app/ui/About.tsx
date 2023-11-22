@@ -11,6 +11,7 @@ export default function AboutPage() {
           height={1600}
           width={1224}
           className="h-full w-4/5 object-cover hidden lg:block"
+          priority
           blurDataURL="/blurMyPicture.webp"
           placeholder="blur"
         />
