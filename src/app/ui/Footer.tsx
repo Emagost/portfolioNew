@@ -12,6 +12,7 @@ export default function Footer() {
                 <li>
                   <a
                     onClick={event => handleWorkClick(event, 'about')}
+                    href="#"
                     className="hover:text-sky-400 transition hover:cursor-pointer"
                   >
                     About
@@ -19,6 +20,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
+                    href="#"
                     onClick={event => handleWorkClick(event, 'work')}
                     className="hover:text-sky-400 transition hover:cursor-pointer"
                   >
@@ -27,6 +29,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
+                    href="#"
                     onClick={event => handleWorkClick(event, 'contact')}
                     className="hover:text-sky-400 transition hover:cursor-pointer"
                   >
