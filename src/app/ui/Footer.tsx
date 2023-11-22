@@ -44,7 +44,13 @@ export default function Footer() {
                     href="https://github.com/Emagost"
                     className="flex items-center space-x-3 hover:text-sky-400 transition"
                   >
-                    <Image alt="Github icon" src="/githubIcon.svg" width={24} height={24} />
+                    <Image
+                      priority={false}
+                      alt="Github icon"
+                      src="/githubIcon.svg"
+                      width={24}
+                      height={24}
+                    />
                     <span>Github</span>
                   </a>
                 </li>

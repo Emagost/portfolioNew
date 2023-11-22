@@ -16,6 +16,7 @@ export default function WorkPage() {
                 <Image
                   width={992}
                   height={75}
+                  priority={false}
                   alt="Company Logo"
                   className="aspect-[2/2] w-14"
                   src="https://scale.com/_next/image?url=https%3A%2F%2Fsite-assets.plasmic.app%2Fd5d93c7ec9c83aac4707f36a035c228b.png&w=992&q=75"
@@ -42,6 +43,7 @@ export default function WorkPage() {
               >
                 Learn more about Scale AI{' '}
                 <Image
+                  priority={false}
                   src="/arrowIcon.svg"
                   alt="arrow icon"
                   height={20}

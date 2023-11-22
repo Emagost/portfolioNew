@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     },
   ],
   archives: '/myPicture.jpeg',
+  metadataBase: new URL('https://portfolio-emadev.vercel.app/'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
