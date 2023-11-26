@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import NavBar from './NavBar'
+import getBase64 from '../lib/getLocalBase64'
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const myBlurDataUrl = await getBase64('/myPicture.jpeg')
+
   return (
     <div className="flex w-full h-full">
       <div className="container w-2/4 relative">
@@ -12,7 +15,7 @@ export default function AboutPage() {
           width={1224}
           className="h-full w-4/5 object-cover hidden lg:block"
           priority
-          blurDataURL="/blurMyPicture.webp"
+          blurDataURL={myBlurDataUrl}
           placeholder="blur"
         />
         <h2 className="absolute text-4xl transform -rotate-90 origin-left text-white px-4 py-2 top-1/2 ml-6 select-none">
