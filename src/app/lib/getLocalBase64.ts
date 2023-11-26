@@ -8,6 +8,7 @@ export default async function getBase64(imagePath: string) {
 
     return base64
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.log('Error: ', err)
   }
 }
