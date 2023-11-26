@@ -1,8 +1,13 @@
 import Image from 'next/image'
 import Chip from './Chip'
 import { scaleSkills } from '../lib/data'
+import getFetchBase64 from '../lib/getFetchBase64'
 
-export default function WorkPage() {
+export default async function WorkPage() {
+  const blurImage = await getFetchBase64(
+    'https://scale.com/_next/image?url=https%3A%2F%2Fsite-assets.plasmic.app%2Fd5d93c7ec9c83aac4707f36a035c228b.png&w=992&q=75',
+  )
+
   return (
     <section id="work">
       <div className="flex items-center h-screen overflow-x-hidden bg-gradient-to-b from-[#1A1840] from-10% to-black to-20%">
@@ -14,12 +19,14 @@ export default function WorkPage() {
             <div className="p-4 lg:p-8">
               <div className="flex items-center gap-x-2">
                 <Image
-                  width={992}
-                  height={75}
+                  width={56}
+                  height={56}
                   priority={false}
-                  alt="Company Logo"
-                  className="aspect-[2/2] w-14"
+                  alt="Scale AI Logo"
                   src="https://scale.com/_next/image?url=https%3A%2F%2Fsite-assets.plasmic.app%2Fd5d93c7ec9c83aac4707f36a035c228b.png&w=992&q=75"
+                  className="aspect-[2/2] w-14"
+                  blurDataURL={blurImage}
+                  placeholder="blur"
                 />
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-50">Scale AI</h3>

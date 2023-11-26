@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import NavBar from './NavBar'
-import getBase64 from '../lib/getLocalBase64'
+import getLocalBase64 from '../lib/getLocalBase64'
 
 export default async function AboutPage() {
-  const myBlurDataUrl = await getBase64('/myPicture.jpeg')
+  const myBlurDataUrl = await getLocalBase64('/myPicture.jpeg')
 
   return (
     <div className="flex w-full h-full">
